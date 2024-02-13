@@ -11,7 +11,14 @@ class MainView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(),
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          leading: Icon(Icons.favorite),
+          actions: [Icon(Icons.apps)],
+        ),
+        body: const HomeView(),
+      ),
     );
   }
 }
